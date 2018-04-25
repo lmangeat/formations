@@ -1,0 +1,2 @@
+<input type="search" [(ngModel)]="username" (keyup.enter)="search()"/>
+<button (click)="search()" *ngIf="username">{{'srch' | translate:'en'}}</button>
