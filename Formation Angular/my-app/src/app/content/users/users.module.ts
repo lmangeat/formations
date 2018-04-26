@@ -1,9 +1,9 @@
 import { NgModule } from "@angular/core";
 import { UserComponent } from "./users.component";
-import { MatListModule, MatCardModule } from "@angular/material";
+import { MatListModule, MatCardModule, MatButtonModule } from "@angular/material";
 import { CommonModule } from "@angular/common";
 import { UserCardComponent } from "./user-card/user-card.component";
-import { NameFilterPipe } from "../shared/pipes/name-filter.pipe";
+import { NameFilterPipe } from "../../shared/pipes/name-filter.pipe";
 import { FormsModule } from "@angular/forms";
 
 @NgModule({
@@ -16,6 +16,7 @@ import { FormsModule } from "@angular/forms";
     MatListModule,
     CommonModule,
     MatCardModule,
+    MatButtonModule,
     FormsModule
   ],
   exports: [UserComponent]

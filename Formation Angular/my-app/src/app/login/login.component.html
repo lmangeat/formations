@@ -1,0 +1,9 @@
+<form class="login-container" (ngSubmit)="submit()" [formGroup]="loginForm">
+  <mat-form-field>
+    <input matInput placeholder="Email" [formControl]="propEmail">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Password" [formControl]="propPassword">
+  </mat-form-field>
+  <button mat-button type="submit">Valider</button>
+</form>

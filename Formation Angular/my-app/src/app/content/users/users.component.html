@@ -1,0 +1,13 @@
+<div>
+    <input type="text" placeholder="Filter by name" [(ngModel)] = "nameFilter"/>
+    <mat-list>
+      <mat-list-item *ngFor="let user of users | nameFilter:nameFilter ; let isEven = even" [ngClass] = "{ red : isEven}">
+        <span>{{user.name}}</span>
+      </mat-list-item>
+    </mat-list>
+
+    <div>
+      <user-card *ngFor="let user of users" [user] = "user"
+      (onDeleteUser)="deleteUser(user.id)"></user-card>
+    </div>
+</div>

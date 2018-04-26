@@ -4,6 +4,9 @@
     <mat-card-content>
       <p>
         <span>{{user.email}}</span>
+        <mat-card-actions>
+            <button mat-button (click)="delete()">Supprimer</button>
+        </mat-card-actions>
       </p>
     </mat-card-content>
 </mat-card>
