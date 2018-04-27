@@ -1,24 +1,28 @@
 import { NgModule } from "@angular/core";
-import { UserComponent } from "./users.component";
+import { UsersComponent } from "./users.component";
 import { MatListModule, MatCardModule, MatButtonModule } from "@angular/material";
 import { CommonModule } from "@angular/common";
 import { UserCardComponent } from "./user-card/user-card.component";
 import { NameFilterPipe } from "../../shared/pipes/name-filter.pipe";
 import { FormsModule } from "@angular/forms";
+import { ContentRouter } from "../content.router";
+import { ConfirmDirective } from "../../shared/directives/confirm.directive";
 
 @NgModule({
   declarations: [
-    UserComponent,
+    UsersComponent,
     UserCardComponent,
-    NameFilterPipe
+    NameFilterPipe,
+    ConfirmDirective
   ],
   imports: [
     MatListModule,
     CommonModule,
     MatCardModule,
     MatButtonModule,
-    FormsModule
+    FormsModule,
+    ContentRouter
   ],
-  exports: [UserComponent]
+  exports: [UsersComponent]
 })
 export class UsersModule {}

@@ -8,7 +8,7 @@ import { UserService } from "../../core/user.service";
 })
 export class UserCardComponent {
   @Input() user:any;
-  @Output() onDeleteUser: EventEmitter<any> = new EventEmitter();
+  @Output() onDeleteUser: EventEmitter<void> = new EventEmitter();
 
   constructor(private UserService: UserService){}
 

@@ -1,0 +1,17 @@
+<form *ngIf="user" (ngSubmit)="submit()" [formGroup]="userProfileForm">
+  <h1>{{user.name}}</h1>
+  <br />
+  <mat-form-field>
+    <input matInput placeholder="Name" type="text" [formControl]="propName">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Username" type="text" [formControl]="propUsername">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Email" type="email" [formControl]="propEmail">
+  </mat-form-field>
+  <button mat-button type="submit">Modifier</button>
+  <div class="errors" *ngIf="userProfileForm.submitted">
+    <div class="errors" *ngIf="userProfileForm.controls.email.invalid && userProfileForm.controls.email.errors.invalidEmail">L'email doit être un email valide</div>
+  </div>
+</form>

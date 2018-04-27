@@ -1,0 +1,24 @@
+form {
+  display: inline;
+}
+
+/* /deep/ .mat-input-placeholder {
+  color: whitesmoke;
+}
+
+
+/deep/ .mat-form-field-underline {
+  background-color: whitesmoke;
+} */
+
+/deep/ .mat-input-ripple {
+  background-color: whitesmoke;
+}
+/deep/ .mat-focused .mat-form-field-label {
+  color: whitesmoke;
+}
+
+/deep/ .mat-input-element {
+  caret-color: whitesmoke;
+}
+

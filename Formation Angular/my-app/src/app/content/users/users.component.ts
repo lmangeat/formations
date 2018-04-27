@@ -1,16 +1,17 @@
 import { Component, Output, OnInit } from "@angular/core";
 import { UserService } from "../core/user.service";
+import { SearchService } from "../core/search.service";
 
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.css']
 })
-export class UserComponent implements OnInit {
+export class UsersComponent implements OnInit {
   users : Array<any> = [];
   nameFilter:string;
 
-  constructor(private UserService: UserService){}
+  constructor(private UserService: UserService, private SearchService: SearchService){}
 
   ngOnInit(){
     this.UserService
@@ -18,6 +19,12 @@ export class UserComponent implements OnInit {
     .then((users:Array<any>) => {
       this.users = users;
     });
+
+    this.SearchService
+        .searchUser
+        .subscribe((searchString) => {
+          this.nameFilter = searchString;
+        });
   }
 
   createUser(user: any) {
